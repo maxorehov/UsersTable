@@ -1,0 +1,75 @@
+header {
+    background-color: #546bfe;
+}
+h1 {
+    text-transform: uppercase;
+}
+
+table {
+    margin-top: 50px;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.add, .back {
+	background-color: orange;
+	padding: 5px;
+	height: 32px;
+	color: black;
+	margin-top: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.add:hover, .back:hover {
+	text-decoration: none;
+	color: #000;
+}
+.down {
+	height: 15px;
+	width: 15px;
+	background-image: url(../img/arrow_down.svg);
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.up {
+	height: 15px;
+	width: 15px;
+	background-image: url(../img/arrows_up.svg);
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.users ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.users li {
+    margin-left: 15px;
+}
+
+.add-user, .edit-user {
+    margin: 50px auto;
+    width: 450px;
+    background-color: #cdd3ff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/*.sort {
+    background-color: green;
+}
+
+.desc {
+    background-color: firebrick;
+}*/
+
+.search {
+    margin-top: 5px;
+    width: 85px;
+}
