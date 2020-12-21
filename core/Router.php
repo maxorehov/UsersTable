@@ -30,7 +30,6 @@ class Router {
     }
     
     public function run() {
-        
         if ($this->matchRoute()) {
             $controller = 'app\controllers\\' . $this->route['controller'] . 'Controller';
             if (class_exists($controller)) {

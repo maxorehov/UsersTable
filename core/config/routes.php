@@ -5,6 +5,15 @@ return [
         'controller' => 'Main',
         'action' => 'index'
     ],
+    
+    '#^filter$#' => [
+        'controller' => 'Main',
+        'action' => 'filter'
+    ],
+        '#^search#' => [
+        'controller' => 'Main',
+        'action' => 'search'
+    ],
     '#^add-user$#' => [
         'controller' => 'AddUser',
         'action' => 'index'

@@ -60,4 +60,49 @@ class Model {
             echo "Не удалось добавить нового пользователя" . $e->getMessage();
         }
     }
+    
+    public function filter($cond) {
+        $query = "SELECT * FROM users ORDER BY $cond";
+        try{
+            $response = $this->pdo->query($query);
+            $users = $response->fetchAll();
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+
+        foreach ($users as $user) {
+            echo "<tr>"
+                    . "<th>{$user['id']}</th>"
+                    . "<th>{$user['first_name']}</th>"
+                    . "<th>{$user['last_name']}</th>"
+                    . "<th>{$user['email']}</th>"
+                    . "<th>{$user['create_date']}</th>"
+                    . "<th>{$user['update_date']}</th>"
+                    . "<th><a href='edit-user?id={$user["id"]}'>EDIT</a></th>"
+                    . "</tr>";
+
+        }
+    }
+    
+    public function search($where, $value) {
+
+        $query = "SELECT * FROM users WHERE {$where} LIKE '{$value}%'";
+        try {
+            $response = $this->pdo->query($query);
+            $data = $response->fetchAll();
+            } catch (Exception $e) {
+                echo "Ошибка при обращении к базе данных" . $e->getMessage(); 
+            }
+        foreach($data as $user) {
+            echo "<tr>"
+                    . "<th>{$user['id']}</th>"
+                    . "<th>{$user['first_name']}</th>"
+                    . "<th>{$user['last_name']}</th>"
+                    . "<th>{$user['email']}</th>"
+                    . "<th>{$user['create_date']}</th>"
+                    . "<th>{$user['update_date']}</th>"
+                    . "<th><a href='edit-form.php?id={$user["id"]}'>EDIT</a></th>"
+                    . "</tr>";
+        }
+    }
 }

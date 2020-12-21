@@ -1,8 +1,8 @@
 let btnSort = document.querySelectorAll('button');
 let search = document.querySelectorAll('.search'); 
 let arrowSort = document.querySelectorAll('i'); 
-const filterUrl = 'core/libs/filter.php';
-const serchUrl = 'core/libs/search.php';
+const filterUrl = 'filter';
+const serchUrl = 'search';
   
   
 btnSort.forEach(e => {
